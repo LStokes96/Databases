@@ -1,0 +1,15 @@
+1) Select count(name) from city where countrycode='usa';
+2) select * from county where code='arg';
+3) select * from country where lifeexpectancy in not null order by lifeexpectancy limit 1;
+4) select country.name, country.capital, city.id,city.name from country left outer join on country.capital=city.id where country.name='spain';
+5) Select country.name, country.region, countrylanguage.language from country left outer join countrylanguage on country.code=countrylanguage.country.code where country.region='southeast asia';
+6)select name from city where name liek 'F%' limit 25:
+7)select count(name) from city where countrycode='chn';
+8)select * from country where population is not null orber by population limit 1:
+9) select count(name) from country;
+10) select name, surfacearea from country order by surfacearea limit 10;
+11) select name, population from city where countrycode='jpn' order by population decs limit 5;
+12) select name,code,headofstate from country where headofstate='elisabeth ii'; #spelling mistake in the table using an s instead of z
+13)select name, population, surfacearea, populataion/surfacearea as ratio from country order by ratio limit 10;
+14) select distinct language from countrylanguage;
+
