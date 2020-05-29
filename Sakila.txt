@@ -20,5 +20,5 @@ SELECT first_name, last_name from actor where actor_id=107;
 19) SELECT title, length from film order by length desc LIMIT 25;
 20) SELECT title, release_year from film where year(release_year)=2010; #Not working,(empty set) why? 
 21)SELECT film.title from film join film_category on film.film_id=film_category.film_id where film_category.category_id=(SELECT Category_id from category where name='horror');
-22)SELECT staff_id, first_name, last_name from staff where staff_id=1;
+22)SELECT staff_id, first_name, last_name from staff where staff_id=1; #Can't get names together (tried first_name+last_name) comes back as 0
 23)
