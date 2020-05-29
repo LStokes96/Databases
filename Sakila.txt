@@ -1,0 +1,24 @@
+1) SELECT * FROM actor;
+2) SELECT * FROM actor where first_name='John';
+3) SELECT * FROM actor where last_name='neeson';
+4) SELECT * FROM acotr where actor_id like'%0';
+5) SELECT film_id, title, description FROM film WHERE film_id=100;
+6) SELECT film_id, title, rating FROM film WHERE rating='R';
+7) SELECT film_id, title, rating FROM film WHERE rating!='R';
+8) SELECT title, length FROM film ORDER BY length LIMIT 10;
+9) SELECT title FROM film;
+10) SELECT title, special_features FROM film WHERE special_features LIKE'%Deleted Scenes%';
+11) SELECT last_name, count(*) AS countof from actor group by last_name having count(*)=1;
+12) SELECT last_name, count(*) AS countof from actor group by last_name having count(*)>1
+13) SELECT actor_id, count(actor_id) AS value FROM film_actor GROUP BY actor_id ORDER BY value DESC LIMIT 1;
+SELECT first_name, last_name from actor where actor_id=107;
+14) SELECT * from inventory where film_id=(SELECT film_id from film where title='academy dinosaur');
+15) SELECT return_date from rental where inventory_id=(SELECT inventory_id from inventory where film_id=(SELECT film_id from film where title='academy dinosaur')LIMIT 1);
+16) SELECT AVG(length) from film;
+17)SELECT film_category.category_id, film.film_id, film.length from film_category join film on film_category.film_id=film.film_id; # Figure out how to implement AVG(length)
+18) SELECT * from film where description like'%robot%' or '%robots%';
+19) SELECT title, length from film order by length desc LIMIT 25;
+20) SELECT title, release_year from film where year(release_year)=2010; #Not working,(empty set) why? 
+21)SELECT film.title from film join film_category on film.film_id=film_category.film_id where film_category.category_id=(SELECT Category_id from category where name='horror');
+22)SELECT staff_id, first_name, last_name from staff where staff_id=1;
+23)
